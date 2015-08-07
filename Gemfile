@@ -47,6 +47,8 @@ gem 'mechanize'
 
 gem "unirest"
 
+gem "thin"
+
 gem "active_model_serializers"
 
 group :development do
