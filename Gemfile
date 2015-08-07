@@ -47,6 +47,8 @@ gem 'mechanize'
 
 gem "unirest"
 
+gem "active_model_serializers"
+
 group :development do
   gem 'rails_layout'
   gem 'quiet_assets'

@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  likes: 1
+  price: 1
+  year: 1
+  created_time: 1
+  kms: 1
+  city: MyString
+  category_id: 1
+  condition: MyString
+  fuel_type: MyString
+  image_count: 1
+  brand_name: MyString
+  images: MyString
+  title: MyString
+  v_model: MyString
+  geo_pins: MyString
+  ad_type: MyString
+  locality: MyString
+  color: MyString
+
+two:
+  likes: 1
+  price: 1
+  year: 1
+  created_time: 1
+  kms: 1
+  city: MyString
+  category_id: 1
+  condition: MyString
+  fuel_type: MyString
+  image_count: 1
+  brand_name: MyString
+  images: MyString
+  title: MyString
+  v_model: MyString
+  geo_pins: MyString
+  ad_type: MyString
+  locality: MyString
+  color: MyString
