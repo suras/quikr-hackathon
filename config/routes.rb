@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'automobiles/ads', to: "automobiles#ads"
+  get 'automobiles/fetch_ads', to: "automobiles#fetch_ads"
   post "automobiles/likes", to: "automobiles#likes"
 
   # The priority is based upon order of creation: first created -> highest priority.

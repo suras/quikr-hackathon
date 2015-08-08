@@ -1,11 +1,21 @@
 class AutomobilesController < ApplicationController
   def ads
-  	params[:categordId] = 71
-  	params[:size] = 20 unless params[:size].present?
-  	params[:from] = 0 unless params[:from].present?
-  	params[:city] = "bangalore" unless params[:city].present?
-  	ads = Automobile.get_ads(params)
-  	render json: ads
+    params[:size] ||= 10
+    if(params[:attrs].present?)
+      Automobile.get_ads_from_attr(params[:attr])
+    else
+      automobiles = Automobile.order("RANDOM()").limit(params[:size])
+    end
+    render json: automobiles
+  end
+
+  def fetch_ads
+    params[:categordId] = 71
+    params[:size] = 20 unless params[:size].present?
+    params[:from] = 0 unless params[:from].present?
+    params[:city] = "bangalore" unless params[:city].present?
+    ads = Automobile.get_ads(params)
+    render json: ads
   end
 
   def likes
