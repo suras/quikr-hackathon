@@ -5,11 +5,11 @@ class Automobile < ActiveRecord::Base
            "&size=#{params[:size]}&from=#{params[:from]}"+
    	       "&city=#{params[:city]}"
    	ads = Utils.get(url, Api.ads_by_category)
-    # begin
+    begin
    	  self.save_and_get_ads(ads["AdsByCategoryResponse"]["AdsByCategoryData"]["docs"], params)
-    # rescue => e
-    #   []
-    # end
+    rescue => e
+      []
+    end
   end
 
   def self.save_and_get_ads(ads, params)

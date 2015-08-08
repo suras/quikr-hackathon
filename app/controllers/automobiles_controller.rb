@@ -10,7 +10,7 @@ class AutomobilesController < ApplicationController
   end
 
   def fetch_ads
-    params[:categordId] = 71
+    params[:categoryId] = 71
     params[:size] = 20 unless params[:size].present?
     params[:from] = 0 unless params[:from].present?
     params[:city] = "bangalore" unless params[:city].present?
