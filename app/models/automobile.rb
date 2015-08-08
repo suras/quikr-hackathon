@@ -1,4 +1,6 @@
 class Automobile < ActiveRecord::Base
+
+  default_scope { where('image_count > 0') } 
  
   def self.get_ads(params)
    	url = Api.base_url+Api.ads_by_category+"?categoryId=#{params[:categoryId]}"+
