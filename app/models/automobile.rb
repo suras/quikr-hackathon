@@ -51,29 +51,30 @@ class Automobile < ActiveRecord::Base
     automobiles = Automobile.where(nil)
     if(params[:price].present? && (params[:price].kind_of? Array))
       price = params[:price]
-      automobiles.where(price: price[0]..price[1])
+      automobiles = automobiles.where(price: price[0]..price[1])
     end
     if(params[:kms].present? && (params[:kms].kind_of? Array))
       kms = params[:kms]
-      automobiles.where(kms: kms[0]..kms[1])
+      automobiles = automobiles.where(kms: kms[0]..kms[1])
     end
     if(params[:fuel_type].present? && (params[:fuel_type].kind_of? Array))
       fuel_type = params[:fuel_type]
-      automobiles.where(fuel_type: fuel_type)
+      automobiles = automobiles.where(fuel_type: fuel_type)
     end
     if(params[:brand_name].present? && (params[:brand_name].kind_of? Array))
       brand_name = params[:brand_name]
-      automobiles.where(brand_name: brand_name)
+      automobiles = automobiles.where(brand_name: brand_name)
     end
     if(params[:color].present? && (params[:color].kind_of? Array))
       color = params[:color]
-      automobiles.where(color: color)
+      automobiles = automobiles.where(color: color)
     end
     if(params[:year].present? && (params[:year].kind_of? Array))
       year = params[:year]
-      automobiles.where(year: year[0]..year[1])
+      automobiles = automobiles.where(year: year[0]..year[1])
     end
-    automobiles.limit(10)
+    automobiles = automobiles.limit(10)
+    automobiles
   end
 
 end
