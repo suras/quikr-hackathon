@@ -2,7 +2,7 @@ class AutomobilesController < ApplicationController
   def ads
     params[:size] ||= 10
     if(params[:attrs].present?)
-      Automobile.get_ads_from_attr(params[:attr])
+      Automobile.get_ads_from_attr(params[:attrs])
     else
       automobiles = Automobile.order("RANDOM()").limit(params[:size])
     end
