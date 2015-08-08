@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150807175836) do
+ActiveRecord::Schema.define(version: 20150808050059) do
 
   create_table "automobiles", force: :cascade do |t|
-    t.integer  "likes"
+    t.integer  "likes",        default: 0
     t.integer  "price"
     t.integer  "year"
     t.integer  "created_time"
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20150807175836) do
     t.string   "v_type"
     t.string   "quikr_url"
     t.integer  "expire_time"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end

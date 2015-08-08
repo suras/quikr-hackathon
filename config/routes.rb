@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'automobiles/ads', to: "automobiles#ads"
+  post "automobiles/likes", to: "automobiles#likes"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
